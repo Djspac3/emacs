@@ -11,6 +11,7 @@
 (setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode 1)
 (setq inhibit-startup-screen t)
+(setq default-directory user-emacs-directory)
 
 ;; makes customize edit this file instead of this file
 (setq custom-file (file-name-concat user-emacs-directory "custom.el"))
