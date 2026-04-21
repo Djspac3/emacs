@@ -46,6 +46,7 @@
 (setq tab-always-indent 'complete)
 (use-package corfu
   :init
+  (setq completion-ignore-case t)
   (global-corfu-mode))
 
 (use-package general
