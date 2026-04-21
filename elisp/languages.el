@@ -32,6 +32,11 @@
 (add-to-list 'eglot-server-programs
              '((rust-ts-mode rust-mode) .
                ("C:\\Users\\build\\.cargo\\bin\\rust-analyzer.exe")))
+(with-eval-after-load 'eglot
+  (define-key eglot-mode-map (kbd "C-c C-e") #'eglot-code-actions))
+
+(define-key global-map (kbd "C-c C-v") #'mc/mark-all-in-region-regexp)
+(define-key global-map (kbd "C-c C-r") #'eglot-rename)
 
 (provide 'languages)
 ;;; languages.el ends here
