@@ -48,6 +48,11 @@
   :init
   (setq completion-ignore-case t)
   (global-corfu-mode))
+(use-package corfu-popupinfo
+  :after corfu
+  :init
+  (setq corfu-popupinfo-delay '(1.0 . 0.5))
+  (corfu-popupinfo-mode 1))
 
 (use-package general
   :ensure t
